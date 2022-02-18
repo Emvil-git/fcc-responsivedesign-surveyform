@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="index_styling.css">
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="header">
+            <h1 id="title">Miguel's Cryptid Zoo and Anomaly Park</h1>
+            <p id="description">Thank you for helping us improve your experience!</p>
+        </div>
+
+        <div id="survey-body">
+            
+    
+            <form id="survey-form">
+                <div id="personal-info">
+                    <div class="form-group">
+                        <label for="name" id="name-label">Name</label>
+                        <input type="text"
+                        name="name"
+                        id="name"
+                        class="form-control"
+                        placeholder="Your name here"
+                        required
+                        />
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email" id="email-label">Email</label>
+                        <input type="email"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Your email here"
+                        required
+                        />
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="age" id="number-label">Age (optional)</label>
+                        <input type="number"
+                        name="age"
+                        id="number"
+                        min="7"
+                        max="122"
+                        class="form-control"
+                        placeholder="Age"
+                        required
+                        />
+                    </div>
+                </div>
+                
+    
+                <div class="form-group">
+                    <p class="form-question">Which category describes you best?</p>
+                    <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select a category</option>
+                      <option value="enthusiast">Cryptozoology Enthusiast</option>
+                      <option value="researcher">Researcher</option>
+                      <option value="investigator">Paranormal Investigator</option>
+                      <option value="removal">Anomaly Removal</option>
+                      <option value="preferNo">Prefer not to say</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+            
+                <div class="form-group">
+                    <p class="form-question">How do you feel about your most recent visit?</p>
+                    <div id="radio-div">
+                        <label class="radio-group">
+                            <input
+                             type="radio"
+                             class="radio-option"
+                             name="recommend"
+                             value="excellent">
+                        Excellent
+                        <span class="radio-btn"></span>
+                        </label>
+                        <label class="radio-group">
+                            <input
+                             type="radio"
+                             class="radio-option"
+                             name="recommend"
+                             value="good">
+                        Good
+                        <span class="radio-btn"></span>
+                        </label>
+                        <label class="radio-group">
+                            <input
+                             type="radio"
+                             class="radio-option"
+                             name="recommend"
+                             value="neutral"
+                             checked>
+                        Neutral
+                        <span class="radio-btn"></span>
+                        </label>
+                        <label class="radio-group">
+                            <input
+                             type="radio"
+                             class="radio-option"
+                             name="recommend"
+                             value="bad">
+                        Bad
+                        <span class="radio-btn"></span>
+                        </label>
+                        <label class="radio-group">
+                            <input
+                             type="radio"
+                             class="radio-option"
+                             name="recommend"
+                             value="horrible">
+                        Horrible
+                        <span class="radio-btn"></span>
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <p class="form-question">Which exhibit/s did you enjoy?</p>
+                    <div id="checkbox-div">
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="humanoids">
+                        Humanoid Meet-and-Greet
+                        <span class="checkmark"></span>
+                        </label>
+        
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="shapeshifters">
+                        Shapeshifters
+                        <span class="checkmark"></span>
+                        </label>
+        
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="flying">
+                        Dragons and Flying Beasts
+                        <span class="checkmark"></span>
+                        </label>
+        
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="beasts">
+                        Strange Beasts
+                        <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="eldritch">
+                        Eldritch Horrors
+                        <span class="checkmark"></span>
+                        </label>
+        
+                        <label class="checkbox-group">
+                            <input
+                             type="checkbox"
+                             class="checkbox-option"
+                             name="exhibit"
+                             value="anomalies">
+                        Reality-Bending Anomalies
+                        <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <p class="form-question">Additional comments/suggestions:</p>
+                    <textarea
+                    name="comment" 
+                    id="comments" 
+                    class="input-textarea"
+                    ></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

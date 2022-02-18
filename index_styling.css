@@ -1,0 +1,362 @@
+body{
+    background-color: #7ce9f1;
+    color: #202020;
+}
+
+h1{
+    font-family: 'Karla', sans-serif;
+}
+
+p{
+    font-family: 'Inconsolata', monospace;
+}
+
+#name-label, #email-label, #number-label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input::placeholder {
+    font-family: 'Inconsolata', monospace;
+  }
+
+select{
+    font-family: 'Inconsolata', monospace;
+}
+
+option{
+    font-family: 'Inconsolata', monospace;
+}
+
+#main{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#survey-body{
+    background-color: #f9f9f9;
+    width: 440px;
+    padding: 1.5rem 3.5% 0.5rem 3.5%;
+    margin: 2rem 0px;
+    top: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1b1b1b;
+    box-shadow: 10px 10px #1b1b1b;
+    overflow-wrap: auto;
+}
+
+#header{
+    background-color: #f9f9f9;
+    position: sticky;
+    width: 500px;
+    padding: 1rem 3rem;
+    margin-top: 1.5rem;
+    top: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1b1b1b;
+    box-shadow: 10px 10px #1b1b1b;
+    overflow-wrap: normal;
+    z-index: 999;
+}
+
+#title{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+#description{
+    padding: 0px 0px 0px 0px;
+    margin: 0.25rem 0px 0px 0px;
+}
+
+#personal-info{
+    margin-bottom: 4rem;
+}
+
+.form-group{
+    margin: 0 auto;
+    margin-bottom: 1.75rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.form-question{
+    padding: 0px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    font-family: 'Inconsolata', monospace;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #EDEDED;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-color: #1b1b1b;
+    outline: none;
+    transition: 0.1s;
+  }
+
+  .form-control:hover{
+    background-color: #fbfbfb;
+}
+
+.form-control:focus{
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 5px 5px #1b1b1b;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#radio-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.radio-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 1.5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-group input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-option{
+    margin-right: 2rem;
+}
+
+.radio-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #eee;
+    border-style: solid;
+    border-color: #1b1b1b;
+    border-width: 1.75px;
+    border-radius: 50%;
+    transition: 0.1s;
+  }
+  
+  .radio-group:hover input ~ .radio-btn {
+    background-color: #fff;
+  }
+  
+  .radio-group input:checked ~ .radio-btn {
+    background-color: #1b1b1b;
+  }
+  
+  .radio-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radio-group input:checked ~ .radio-btn:after {
+    display: block;
+  }
+  
+  .radio-group .radio-btn:after {
+    top: 3px;
+    left: 2.5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+.radio-group, .radio-btn-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-option{
+    margin-right: 0.5rem;
+}
+
+
+.checkbox-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 0.25rem;
+    padding-left: 1.75rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.1s;
+}
+
+#checkbox-div{
+    margin-left: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.checkbox-group input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-option{
+    margin-right: 1rem;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: #eee;
+    border-style: solid;
+    border-color: #1b1b1b;
+    border-width: 1.75px;
+    transition: 0.1s;
+  }
+  
+  .checkbox-group:hover input ~ .checkmark {
+    background-color: #fff;
+  }
+  
+  .checkbox-group input:checked ~ .checkmark {
+    background-color: #1b1b1b;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkbox-group input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-group .checkmark:after {
+    left: 3.5px;
+    top: 0px;
+    width:2.5px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #comments{
+      width: 100%;
+      height: 132px;
+      resize: none;
+      border-radius: 0px;
+      border-width: 2px;
+      border-color: #1b1b1b;
+      background-color: #EDEDED;
+      outline: none;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      transition: 0.1s;
+  }
+
+#comments:hover{
+    background-color: #fbfbfb;
+}
+
+  #comments:focus{
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: 5px 5px #1b1b1b;
+    border-radius: 16px;
+    padding: 0.75rem 1rem;
+}
+
+#submit{
+    margin-top: 3rem;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3rem;
+    color: #f9f9f9;
+    background-color: #2259a1;
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-style: solid;
+    border-color: #1b1b1b;
+    border-width: 2px;
+    border-radius: 0;
+    box-shadow: 5px 5px #1b1b1b;
+    transition: 0.1s;
+}
+
+#submit:hover{
+    background-color: #5a7bd6;
+}
+
+#submit:active{
+    background-color: #3fa5a7bd6544;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 624px) {
+
+    #header{
+        width: 90%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    #survey-body{
+        width: 87%;
+    }
+
+    #radio-div{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
